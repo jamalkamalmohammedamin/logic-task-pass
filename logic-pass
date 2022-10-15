@@ -1,0 +1,42 @@
+#Q1
+str = "environment"
+  
+
+print ("Original string: " + str) 
+  
+# Removing char at index 2 
+# using join() + list comprehension 
+res_str = ''.join([str[i] for i in range(len(str)) if i != 2]) 
+  
+
+print ("String after removal of character: " + res_str) 
+
+
+
+#Q2
+stop = int(input("Enter the upper bound: "))
+start = int(input("Enter the lower bound: "))
+print("Prime numbers between", start, "and", stop, "are:")
+for val in range(start, stop):
+  if val > 1:
+    for i in range(2, val):
+      if (val % i) == 0:
+        break
+    else:
+      print(val, end=" ")
+      
+      
+      #Q3
+      
+      string = "Environmental pollution";
+    
+print("Duplicate characters in a given string: ");  
+for i in range(0, len(string)):  
+    count = 1;  
+    for j in range(i+1, len(string)):  
+        if(string[i] == string[j] and string[i] != ' '):  
+            count = count + 1;  
+            string = string[:j] + '0' + string[j+1:];  
+    
+    if(count > 1 and string[i] != '0'):  
+        print(string[i]," - ",count);
